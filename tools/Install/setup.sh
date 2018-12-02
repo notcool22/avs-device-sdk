@@ -23,7 +23,8 @@ CLONE_URL=${CLONE_URL:- 'https://github.com/notcool22/avs-device-sdk.git'}
 PORT_AUDIO_FILE="pa_stable_v190600_20161030.tgz"
 PORT_AUDIO_DOWNLOAD_URL="http://www.portaudio.com/archives/$PORT_AUDIO_FILE"
 
-TEST_MODEL_DOWNLOAD="https://github.com/Sensory/alexa-rpi/blob/master/models/spot-alexa-rpi-31000.snsr"
+TEST_MODEL_DOWNLOAD="https://github.com/Kitt-AI/snowboy/tree/master/resources/common.res"
+TEST_MODEL_DOWNLOAD="https://github.com/Kitt-AI/snowboy/tree/master/resources/alexa/alexa-avs-sample-app/alexa.umdl"
 
 BUILD_TESTS=${BUILD_TESTS:-'true'}
 
@@ -41,8 +42,8 @@ BUILD_PATH="$INSTALL_BASE/$BUILD_FOLDER"
 SOUNDS_PATH="$INSTALL_BASE/$SOUNDS_FOLDER"
 DB_PATH="$INSTALL_BASE/$DB_FOLDER"
 CONFIG_DB_PATH="$DB_PATH"
-UNIT_TEST_MODEL_PATH="$INSTALL_BASE/avs-device-sdk/KWD/inputs/SensoryModels/"
-UNIT_TEST_MODEL="$THIRD_PARTY_PATH/alexa-rpi/models/spot-alexa-rpi-31000.snsr"
+UNIT_TEST_MODEL_PATH="$INSTALL_BASE/avs-device-sdk/KWD/inputs/KittAiModels/"
+UNIT_TEST_MODEL="$THIRD_PARTY_PATH/node_modules/snowboy/resources/alexa/alexa-avs-sample-app/alexa.umdl"
 INPUT_CONFIG_FILE="$SOURCE_PATH/avs-device-sdk/Integration/AlexaClientSDKConfig.json"
 OUTPUT_CONFIG_FILE="$BUILD_PATH/Integration/AlexaClientSDKConfig.json"
 TEMP_CONFIG_FILE="$BUILD_PATH/Integration/tmp_AlexaClientSDKConfig.json"
