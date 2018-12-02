@@ -20,12 +20,12 @@ fi
 
 SOUND_CONFIG="$HOME/.asoundrc"
 START_SCRIPT="$INSTALL_BASE/startsample.sh"
-CMAKE_PLATFORM_SPECIFIC=(-DSENSORY_KEY_WORD_DETECTOR=ON \
+CMAKE_PLATFORM_SPECIFIC=(-DSKITTAI_KEY_WORD_DETECTOR=ON \
     -DGSTREAMER_MEDIA_PLAYER=ON -DPORTAUDIO=ON \
     -DPORTAUDIO_LIB_PATH="$THIRD_PARTY_PATH/portaudio/lib/.libs/libportaudio.$LIB_SUFFIX" \
     -DPORTAUDIO_INCLUDE_DIR="$THIRD_PARTY_PATH/portaudio/include" \
-    -DSENSORY_KEY_WORD_DETECTOR_LIB_PATH=$THIRD_PARTY_PATH/alexa-rpi/lib/libsnsr.a \
-    -DSENSORY_KEY_WORD_DETECTOR_INCLUDE_DIR=$THIRD_PARTY_PATH/alexa-rpi/include)
+    -DKITTAI_KEY_WORD_DETECTOR_LIB_PATH=$THIRD_PARTY_PATH/node_modules/snowboy/lib/rpi/libsnsr.a \
+    -DKITTAI_KEY_WORD_DETECTOR_INCLUDE_DIR=$THIRD_PARTY_PATH/node_modules/snowboy/include)
 
 GSTREAMER_AUDIO_SINK="alsasink"
 
@@ -68,7 +68,6 @@ build_kwd_engine() {
   echo
 
   cd $THIRD_PARTY_PATH
-  bash ./alexa-rpi/bin/license.sh
 }
 
 generate_start_script() {
