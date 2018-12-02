@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.1 FATAL_ERROR)
-
+add_definitions(-D_GLIBCXX_USE_CXX11_ABI=0)
 # Set project information
 project(AlexaClientSDK VERSION 1.10.0 LANGUAGES CXX)
 set(PROJECT_BRIEF "A cross-platform, modular SDK for interacting with the Alexa Voice Service")
