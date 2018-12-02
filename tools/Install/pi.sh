@@ -64,7 +64,7 @@ EOF
 build_kwd_engine() {
   #get sensory and build
   echo
-  echo "==============> CLONING AND BUILDING SENSORY =============="
+  echo "==============> CLONING AND BUILDING SENSORYputo=============="
   echo
 
   cd $THIRD_PARTY_PATH
